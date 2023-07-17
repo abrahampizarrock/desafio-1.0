@@ -1,72 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
 
-<section id="thumbnails">
-    <%= link_to "#seccion-pages_index_path" do %>
-  <article>
-   <a class="thumbnail" href="thumbs/01.jpg" data-position="left center">
-      <%= image_tag "fulls/01f.jpg", alt: "" %>
-    </a>
-    <h2>Diam tempus accumsan</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </article>
-<% end %>
+  <link rel="stylesheet" href="<%= asset_path 'main.css' %>"/>
 
-    <article>
-      <%= link_to(image_tag('thumbs/02.jpg', alt: ''), 'fulls/02f.jpg', class: 'thumbnail') %>
-      <h2>Vivamus convallis libero</h2>
-      <p>Sed velit lacus, laoreet at venenatis convallis in lorem tincidunt.</p>
-    </article>
-    <article>
-      <%= link_to(image_tag('thumbs/03.jpg', alt: ''), 'fulls/03f.jpg', class: 'thumbnail', 'data-position' => 'top center') %>
-      <h2>Nec accumsan enim felis</h2>
-      <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
-    </article>
-    <article>
-      <%= link_to(image_tag('thumbs/04.jpg', alt: ''), 'fulls/04f.jpg', class: 'thumbnail', 'data-position' => 'top center') %>
-      <h2>Nec accumsan enim felis</h2>
-      <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
-    </article>
-    <article>
-      <%= link_to(image_tag('thumbs/05.jpg', alt: ''), 'fulls/05f.jpg', class: 'thumbnail', 'data-position' => 'top center') %>
-      <h2>Nec accumsan enim felis</h2>
-      <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
-    </article>
-    <article>
-      <%= link_to(image_tag('thumbs/06.jpg', alt: ''), 'fulls/06f.jpg', class: 'thumbnail', 'data-position' => 'top center') %>
-      <h2>Nec accumsan enim felis</h2>
-      <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
-    </article>
-    <article>
-      <%= link_to(image_tag('thumbs/07.jpg', alt: ''), 'fulls/07f.jpg', class: 'thumbnail', 'data-position' => 'top center') %>
-      <h2>Nec accumsan enim felis</h2>
-      <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
-    </article>
-    <article>
-      <%= link_to(image_tag('thumbs/08.jpg', alt: ''), 'fulls/08f.jpg', class: 'thumbnail', 'data-position' => 'top center') %>
-      <h2>Nec accumsan enim felis</h2>
-      <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
-    </article>
-    <article>
-      <%= link_to(image_tag('thumbs/09.jpg', alt: ''), 'fulls/09f.jpg', class: 'thumbnail', 'data-position' => 'top center') %>
-      <h2>Nec accumsan enim felis</h2>
-      <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
-    </article>
-    <article>
-      <%= link_to(image_tag('thumbs/10.jpg', alt: ''), 'fulls/10f.jpg', class: 'thumbnail', 'data-position' => 'top center') %>
-      <h2>Nec accumsan enim felis</h2>
-      <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
-    </article>
-    <article>
-      <%= link_to(image_tag('thumbs/11.jpg', alt: ''), 'fulls/11f.jpg', class: 'thumbnail', 'data-position' => 'top center') %>
-      <h2>Nec accumsan enim felis</h2>
-      <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
-    </article>
-    <article>
-      <%= link_to(image_tag('thumbs/12.jpg', alt: ''), 'fulls/12f.jpg', class: 'thumbnail', 'data-position' => 'top center') %>
-      <h2>Nec accumsan enim felis</h2>
-      <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
-    </article>
+  <title>Index</title>
+</head>
+<body>
+  
+
+
+  <!-- Main -->
+  <div id="main">
+
+    <!-- Header -->
+    <header id="header">
+      <h1>Abraham Pizarro</h1>
+      <p>Musico autodidacta, empedernido con los brujos <br>
+          que a estas alturas tiene artos oficios </p>
+      <%= link_to "mas sobre esta galeria", info_path, class:"btn btn-success mt-2 mb-4", role: "button" %>
+          
+      <ul class="icons">
+        <li>
+          <%= link_to 'https://twitter.com/home' do %>
+            <%= image_tag 'twitter.png', alt: 'Twitter', class: 'logo', size: '30x30' %>
+            <span class="label"></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to 'https://www.instagram.com/' do %>
+            <%= image_tag 'instagram.png', alt: 'Instagram', class: 'logo', size: '30x30' %>
+            <span class="label"></span>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to 'https://github.com/abrahampizarrock' do %>
+            <%= image_tag 'github.png', alt: 'Github', class: 'logo', size: '30x30' %>
+            <span class="label"></span>
+          <% end %>
+        </li>
+        
+        <li>
+          <%= link_to 'https://mail.google.com/' do %>
+            <%= image_tag 'mail.png', alt: 'Mail', class: 'logo', size: '30x30' %>
+            <span class="label"></span>
+          <% end %>
+        </li>
+         </ul>
+    </header>
+
+    <section id="thumbnails">
+      
+        <article>
+        <a class="thumbnail" href="<%= asset_path '01.jpg' %>" data-position="left center">
+            <%= image_tag "01f.jpg", alt: "" %></a>
+            <%= link_to infor_foto1_path do %>
+          <h2>Diam tempus accumsan</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <% end %>
+        </article>
+      
+
+      <article>
+        <a class="thumbnail" href="<%= asset_path '02.jpg' %>" data-position="left center">
+          <%= image_tag "02f.jpg", alt: "" %></a> 
+          <%= link_to infor_foto2_path do %>        
+          <h2>Vivamus convallis libero</h2>
+        <p>Sed velit lacus, laoreet at venenatis convallis in lorem tincidunt.</p>
+        <% end %>
+      </article>
+      <article>
+        <a class="thumbnail" href="<%= asset_path '03.jpg' %>" data-position="left center">
+          <%= image_tag "03f.jpg", alt: "" %>
+          <%= link_to infor_foto3_path do %>          
+          <h2>Nec accumsan enim felis</h2>
+        <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
+        <% end %>
+      </article>
+      <article>
+        <a class="thumbnail" href="<%= asset_path '04.jpg' %>" data-position="left center">
+          <%= image_tag "04f.jpg", alt: "" %> 
+          <%= link_to infor_foto4_path do %>         
+          <h2>Nec accumsan enim felis</h2>
+        <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
+        <% end %>
+      </article>
+      <article>
+        <a class="thumbnail" href="<%= asset_path '05.jpg' %>" data-position="left center">
+          <%= image_tag "05f.jpg", alt: "" %> 
+          <%= link_to infor_foto5_path do %>         
+          <h2>Nec accumsan enim felis</h2>
+        <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
+        <% end %>
+      </article>
+      <article>
+        <a class="thumbnail" href="<%= asset_path '06.jpg' %>" data-position="left center">
+          <%= image_tag "06f.jpg", alt: "" %> 
+          <%= link_to infor_foto6_path do %>         
+          <h2>Nec accumsan enim felis</h2>
+        <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
+        <% end %>
+      </article>
+      <article>
+        <a class="thumbnail" href="<%= asset_path '07.jpg' %>" data-position="left center">
+          <%= image_tag "07f.jpg", alt: "" %> 
+          <%= link_to infor_foto7_path do %>         
+          <h2>Nec accumsan enim felis</h2>
+        <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
+        <% end %>
+      </article>
+      <article>
+        <a class="thumbnail" href="<%= asset_path '08.jpg' %>" data-position="left center">
+          <%= image_tag "08f.jpg", alt: "" %> 
+          <%= link_to infor_foto8_path do %>         
+          <h2>Nec accumsan enim felis</h2>
+        <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
+        <% end %>
+      </article>
+      <article>
+        <a class="thumbnail" href="<%= asset_path '09.jpg' %>" data-position="left center">
+          <%= image_tag "09f.jpg", alt: "" %>
+          <%= link_to infor_foto9_path do %>         
+          <h2>Nec accumsan enim felis</h2>
+        <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
+        <% end %>
+      </article>
+      <article>
+        <a class="thumbnail" href="<%= asset_path '10.jpg' %>" data-position="left center">
+          <%= image_tag "10f.jpg", alt: "" %> 
+          <%= link_to infor_foto10_path do %>       
+          <h2>Nec accumsan enim felis</h2>
+        <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
+        <% end %>
+      </article>
+      
+      <article>
+        <a class="thumbnail" href="<%= asset_path '11.jpg' %>" data-position="left center">
+          <%= image_tag "11f.jpg", alt: "" %>
+          <%= link_to infor_foto11_path do %>        
+          <h2>Nec accumsan enim felis</h2>
+        <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
+        <% end %>
+      </article>
+      <article>
+        <a class="thumbnail" href="<%= asset_path '12.jpg' %>" data-position="left center">
+          <%= image_tag "12f.jpg", alt: "" %>        
+          <%= link_to infor_foto12_path do %>
+          <h2>Nec accumsan enim felis</h2>
+          <p>Maecenas eleifend tellus ut turpis eleifend, vitae pretium faucibus.</p>
+        <% end %>
+        
+      </article>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="copyright">
+        <li>&copy; Untitled.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a>.</li>
+      </ul>
+    </footer>
+
+  </div>
+
+  <!-- Scripts -->
+  <%= javascript_include_tag 'application.js' %>
+  <%= javascript_include_tag 'jquery.min.js' %>
+  <%= javascript_include_tag 'browser.min.js' %>
+  <%= javascript_include_tag 'breakpoints.min.js' %>
+  <%= javascript_include_tag 'main.js' %>
+
   
   
   
-  
+</body>
+</html>
   
